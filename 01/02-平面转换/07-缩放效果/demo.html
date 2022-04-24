@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:41:04
+ * @LastEditTime: 2022-04-16 17:17:30
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \02-平面转换\07-缩放效果\demo.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放效果</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 210px;
+            margin: 100px auto;
+            background-color: pink;
+            overflow: hidden;
+        }
+        
+        .box img {
+            width: 100%;
+            transition: all 0.5s;
+        }
+        
+        .box:hover img {
+            /* width: 400px;
+            height: 310px; */
+            /* transform: scale(1);
+            transform: scale(1.5);
+            transform: scale(0.5); */
+            transform: scale(5);
+            transform: scale(-0.8);
+            transform: scale(0.8);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./images/product.jpeg" alt="">
+    </div>
+</body>
+
+</html>

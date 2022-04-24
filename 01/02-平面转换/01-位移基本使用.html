@@ -1,0 +1,57 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:54
+ * @LastEditTime: 2022-04-16 15:10:23
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \02-平面转换\01-位移基本使用.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位移-基本使用</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+        /* 鼠标移入到父盒子，son改变位置 */
+        
+        .father:hover .son {
+            /* 像素取值 */
+            /* transform: translate(100px, 100px); */
+            /* transform: translate(-100px, -100px); */
+            /* 百分比便宜 ,以盒子自身的宽高移动*/
+            /* */
+            /* transform: translate(50%, 100%); */
+            /* 一个值代表水平移动 */
+            /* transform: translate(200px); */
+            /*单方向的移动  */
+            transform: translateY(200px);
+            /* 易错点 
+            属性名称一致，属性值不一样，会被覆盖掉 */
+            transform: translateX(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

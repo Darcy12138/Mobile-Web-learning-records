@@ -1,0 +1,63 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-04-16 15:37:06
+ * @LastEditTime: 2022-04-16 16:18:43
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \02-平面转换\03-案例-双开门\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 1336px;
+            height: 600px;
+            margin: 0 auto;
+            background: url('./images/bg.jpg');
+            overflow: hidden;
+        }
+        /* 使用微元素生成两个盒子 */
+        
+        .box::before,
+        .box::after {
+            /* 默认是行内元素 */
+            float: left;
+            width: 683px;
+            height: 600px;
+            background: url(./images/fm.jpg);
+            content: '';
+            transition: all 1s;
+        }
+        
+        .box::after {
+            background-position: right 0;
+        }
+        
+        .box:hover::before {
+            transform: translateX(-100%);
+        }
+        
+        .box:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>
