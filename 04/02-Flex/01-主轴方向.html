@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:38:50
+ * @LastEditTime: 2022-04-22 14:34:10
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \01-案例\02-Flex\01-主轴方向.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主轴方向</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .box li {
+            display: flex;
+            /* 修改主轴的方向 : 列, 视觉: 子级垂直排列 */
+            /* flex-direction: column; */
+            /* 调节主轴对齐方式 */
+            justify-content: center;
+            /* 调节侧轴对齐方式 */
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+        }
+        
+        .box img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="./images/media.png" alt="">
+                <span>媒体</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
