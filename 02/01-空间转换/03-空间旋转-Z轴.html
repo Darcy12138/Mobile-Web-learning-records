@@ -1,0 +1,41 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:32
+ * @LastEditTime: 2022-04-17 14:44:06
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\01-空间转换\03-空间旋转-Z轴.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间旋转-Z轴</title>
+    <style>
+        .box {
+            width: 300px;
+            margin: 100px auto;
+        }
+        
+        img {
+            width: 300px;
+            transition: all 8s;
+        }
+        
+        .box img:hover {
+            /* rotate(360deg)默认围绕z轴旋转 */
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./images/hero.jpeg" alt="">
+    </div>
+</body>
+
+</html>

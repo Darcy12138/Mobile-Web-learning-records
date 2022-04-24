@@ -1,0 +1,68 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-04-17 19:19:56
+ * @LastEditTime: 2022-04-17 19:26:24
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\02-动画\案例1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            /* 调用定义的动画  */
+            animation: move 8s;
+        }
+        /* 定义一个动画 */
+        
+        @keyframes move {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                right: 0;
+                top: 0;
+            }
+            50% {
+                right: 0;
+                bottom: 0;
+            }
+            75% {
+                left: 0;
+                bottom: 0;
+            }
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

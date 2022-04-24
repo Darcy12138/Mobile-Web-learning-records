@@ -1,0 +1,88 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:40:38
+ * @LastEditTime: 2022-04-19 11:15:41
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\03-综合案例\走马灯\08-走马灯.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        img {
+            width: 200px;
+        }
+        
+        .box {
+            width: 600px;
+            height: 112px;
+            border: 5px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        /* 无缝动画 */
+        
+        .box ul {
+            /* 加大ul的width ,让能横向放下所有的图片 */
+            /* width: 1400px; */
+            width: 2000px;
+            animation: move 5s infinite linear;
+        }
+        
+        .box li {
+            float: left;
+        }
+        /* 定义和调用动画 */
+        
+        @keyframes move {
+            /* 动画的第一个状态和盒子的默认状态相同, 可以省略动画的开始状态代码 */
+            /* from {
+            transform: translateX(0);
+          } */
+            to {
+                transform: translateX(-1400px);
+                /* transform: translateX(-800px); */
+            }
+        }
+        /* 增加需求: 当用户鼠标移入, 动画暂定 */
+        
+        .box:hover ul {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./images/1.jpg" alt="" /></li>
+            <li><img src="./images/2.jpg" alt="" /></li>
+            <li><img src="./images/3.jpg" alt="" /></li>
+            <li><img src="./images/4.jpg" alt="" /></li>
+            <li><img src="./images/5.jpg" alt="" /></li>
+            <li><img src="./images/6.jpg" alt="" /></li>
+            <li><img src="./images/7.jpg" alt="" /></li>
+
+            <!-- 为了567移动的时候, 填充显示区域 -->
+            <li><img src="./images/1.jpg" alt="" /></li>
+            <li><img src="./images/2.jpg" alt="" /></li>
+            <li><img src="./images/3.jpg" alt="" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>

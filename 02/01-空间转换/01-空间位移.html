@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>空间位移</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transition: all 0.5s;
+    }
+
+    .box:hover {
+      /* 电脑屏幕是平面, 无法直接演示z轴的移动效果: 离得近或远 */
+      transform: translate3d(50px, 100px, 200px);
+      transform: translateX(100px);
+      transform: translateY(100px);
+      transform: translateZ(100px);
+
+      /* 相当于3d写法 */
+      transform: translateX(100px) translateY(100px) translateZ(100px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

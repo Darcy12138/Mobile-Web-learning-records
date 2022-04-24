@@ -1,0 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:20
+ * @LastEditTime: 2022-04-19 09:44:35
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\02-动画\02-animation复合属性.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation复合属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* animation: change 2s; */
+            /* linear匀速速度曲线 */
+            /* animation: change 2s linear; */
+            /* 完成该动画需要的步骤 */
+            /* animation: change 2s steps(3); */
+            /* 延迟时间 */
+            /* animation: change 2s linear 2s; */
+            /* 重复次数 infinite无限重复
+            alternate 动画方向（轮流，交替*/
+            /* animation: change 2s linear infinite alternate; */
+            /* 动画执行完毕时默认是开始时的状态 backwards默认值
+                forwards是动画结束时的状态 */
+            animation: change 2s linear alternate forwards;
+        }
+        
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

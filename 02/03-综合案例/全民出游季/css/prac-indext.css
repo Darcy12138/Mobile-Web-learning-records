@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* *** 让网页和body的高度是浏览器窗口 的 高度 */
+
+html,
+body {
+    height: 100%;
+}
+
+.box {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    background-size: cover;
+}
+
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -250px;
+    top: 20px;
+    animation: cloud 1s linear infinite alternate;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud .7s linear infinite alternate;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -500px;
+    top: 200px;
+    animation: cloud 1s .3s linear infinite alternate;
+}
+
+
+/* 定义云彩的动画 */
+
+@keyframes cloud {
+    to {
+        transform: translateX(50px);
+    }
+}
+
+.balloon img {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+}
+
+.balloon img:nth-child(1) {
+    margin-left: -550px;
+    animation: balloon 1.5s linear infinite alternate;
+}
+
+.balloon img:nth-child(2) {
+    margin-left: -235px;
+    animation: balloon 1.5s .8s linear infinite alternate;
+}
+
+.balloon img:nth-child(3) {
+    margin-left: 85px;
+    animation: balloon 1.5s .6s linear infinite alternate;
+}
+
+.balloon img:nth-child(4) {
+    margin-left: 400px;
+    animation: balloon 1.5s .9s linear infinite alternate;
+}
+
+@keyframes balloon {
+    to {
+        transform: translateY(-25px);
+    }
+}

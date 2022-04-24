@@ -1,0 +1,65 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:20
+ * @LastEditTime: 2022-04-17 20:35:27
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\02-动画\01-动画实现步骤.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画实现步骤</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            animation: changeSize 5s;
+        }
+        /* 一. 定义动画：从200变大到600 */
+        /* @keyframes move {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        } */
+        /* 二. 定义动画：200 到 500*300 到 800*500 */
+        /* 百分比表示的是占用动画时长的百分比 */
+        
+        @keyframes changeSize {
+            0% {
+                width: 200px;
+            }
+            30% {
+                width: 500px;
+                height: 300px;
+                background-color: skyblue;
+            }
+            60% {
+                width: 800px;
+                height: 500px;
+                background-color: teal;
+            }
+            100% {
+                width: 800px;
+                height: 800px;
+                background-color: rgb(129, 216, 2074);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+
+</html>

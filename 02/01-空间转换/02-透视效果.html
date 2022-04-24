@@ -1,0 +1,44 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:26
+ * @LastEditTime: 2022-04-17 11:59:20
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\01-空间转换\02-透视效果.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>透视效果</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+        
+        body {
+            /* 视距 */
+            /* 常见取值800_1200 */
+            /* 设置过大会出现Z轴位移变化不明显 */
+            /* 设置过小会出现Z轴位移变化太明显 */
+            perspective: 800px;
+        }
+        
+        .box:hover {
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+
+</html>

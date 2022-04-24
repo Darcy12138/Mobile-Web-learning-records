@@ -1,0 +1,54 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:39:20
+ * @LastEditTime: 2022-04-19 11:10:08
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \day02\01-案例\02-动画\04-精灵动画.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>精灵动画</title>
+    <style>
+        .box {
+            /* 1680/12 */
+            /***** 盒子的尺寸和一个精灵小图的尺寸是一样 */
+            width: 140px;
+            height: 140px;
+            /* border: 1px solid #000; */
+            background-image: url(./images/bg.png);
+            /* steps(12) : 数字和精灵小图的个数是一样的 */
+            /* 调用多个动画用逗号隔开 */
+            animation: run 1.5s steps(12) infinite, move 3s linear forwards;
+        }
+        /* 定义动画: 让背景图向左移动 */
+        
+        @keyframes run {
+            form {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -1680px 0;
+            }
+        }
+        /* 定义动画: 位移 */
+        
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
