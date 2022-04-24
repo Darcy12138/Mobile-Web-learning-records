@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:38:56
+ * @LastEditTime: 2022-04-20 10:17:36
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \01-案例\03-Flex\03-主轴对齐方式.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主轴对齐方式</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            /* 左侧排列 */
+            justify-content: start;
+            /* 右侧排列 */
+            justify-content: end;
+            /* 居中排列 */
+            justify-content: center;
+            /* 均分间距，间距在子元素之间 */
+            justify-content: space-between;
+            /* 空白间距均匀的分配在弹性盒子两侧 */
+            justify-content: space-around;
+            /* 弹性盒子与容器之间的间距相等 */
+            justify-content: space-evenly;
+            height: 200px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

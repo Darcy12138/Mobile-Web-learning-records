@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-09 12:38:52
+ * @LastEditTime: 2022-04-20 11:33:45
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \01-案例\03-Flex\05-伸缩比.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            height: 200px;
+            margin: 0 20px;
+            background-color: pink;
+        }
+        
+        .box div:nth-child(1) {
+            flex: 1;
+        }
+        /* flex: 先计算父级剩余尺寸, 看需要把父级分成多少份(把所有flex属性值相加), 每个子级占用自己对应的份数 */
+        
+        .box div:nth-child(2) {
+            flex: 1;
+        }
+        
+        .box div:nth-child(3) {
+            flex: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
