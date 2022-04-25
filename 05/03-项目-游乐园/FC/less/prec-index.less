@@ -1,0 +1,111 @@
+// 引用css文件
+@import './base.less';
+@import './normalize.less';
+
+@rootsize:37.5rem;
+// 开始
+body{
+    background-color: #f0f0f0;
+}
+// 主体部分
+.main{
+    padding-bottom: (50 / @rootsize);
+    .ad {
+        height: (160 / @rootsize);
+        img{
+            height: 100%;
+        }
+    }
+    .title{
+        height: (40 / @rootsize);
+        padding-left: (15 / @rootsize);
+        h3{
+            line-height: (40 / @rootsize);
+            font-size: 14px;
+            color: #3C3C3C;
+        }
+    }
+    section {
+        height: (250 / @rootsize);
+        margin-bottom: (10 / @rootsize);
+        .pic{
+            position: relative;
+            height: (160 / @rootsize);
+            .status {
+                position: absolute;
+                left: (15 / @rootsize);
+                top: (-4 / @rootsize);
+                width: (68 / @rootsize);
+                height: (29 / @rootsize);
+                background: url(../images/status_active.png);
+                background-size: contain;
+                font-size: (12 / @rootsize);
+                color: #fff;
+                text-align: center;
+                line-height: (25 / @rootsize);
+                &.off{
+                    background: url(../images/status_default.png);
+                    background-size: contain;
+                }
+            }
+            .iconfont{
+                position: absolute;
+                top: (18 / @rootsize);
+                right: (18 / @rootsize);
+                font-size: (24 / @rootsize);
+                color: #fff;
+                &.icon-shoucang{
+                    color: #FE6249;
+                }
+            }
+        }
+        .txt{
+            padding: (10 / @rootsize) (15 / @rootsize);
+            background-color: #fff;
+            .top{
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    width: (295 / @rootsize);
+                    font-size: (15 / @rootsize);
+                    color: #3C3C3C;
+                }
+                p{
+                    font-size: (15 / @rootsize);
+                    color: #FE6249;
+                }
+            }
+            .bottom{
+                margin-top: (12 / @rootsize);
+                span{
+                    margin-right: (15 / @rootsize);
+                    font-size: (11 / @rootsize);
+                    color: #B4B4B4;
+                }
+            }
+        }
+    }
+}
+// 底部工具栏
+.toolbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: (50 / @rootsize);
+    background-color: #FECA49;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: (24 / @rootsize);
+        color:#D78B09 ;
+        a{
+            font-size: (11 / @rootsize);
+        }
+
+    }
+}
