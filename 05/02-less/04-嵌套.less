@@ -1,24 +1,21 @@
-.father {
+.father{
     color: red;
-
-    .son {
+    .son{
         width: 50px;
-
-        a {
+        a{
             color: green;
-
-            // a:hover {
-            //     color: orange;
-            // }
-            // &表示当前选择器: 写在哪个选择器的里面就是谁(不会生成后代选择器)
-            // 本质作用是方便代码的迁移
-            &:hover {
-                color: orange;
+            // &表示当前选择器：写在哪个选择器的里面就是谁（不会生成后代选择器）
+            // 本质时方便代码的迁移
+            &:hover{
+                color: aqua;
+            }
+            &::before{
+                content: 'lalalall';
+            }
+            &:nth-child(1){
+                color: cadetblue;
             }
         }
-
-        // a:hover {
-        //     color: pink;
-        // }
+       
     }
 }

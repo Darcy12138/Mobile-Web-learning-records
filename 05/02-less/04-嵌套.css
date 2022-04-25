@@ -8,5 +8,11 @@
   color: green;
 }
 .father .son a:hover {
-  color: orange;
+  color: aqua;
+}
+.father .son a::before {
+  content: 'lalalall';
+}
+.father .son a:nth-child(1) {
+  color: cadetblue;
 }

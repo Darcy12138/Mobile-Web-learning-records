@@ -1,9 +1,6 @@
-.box {
-  color: green;
+.father {
+  background-color: red;
 }
-p {
-  background-color: green;
-}
-a {
-  color: green;
+.father .son {
+  color: red;
 }

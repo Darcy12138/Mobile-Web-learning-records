@@ -1,17 +1,10 @@
 // 1. 定义; 2. 使用
 
 // color是变量名, 自定义的
-@color:green;
-
-.box {
-    // color: pink;
-    color: @color;
-}
-
-p {
-    background-color: @color;
-}
-
-a {
-    color: @color;
+@fontcolor:red;
+.father{
+    background-color: @fontcolor;
+    .son{
+        color: @fontcolor;
+    }
 }

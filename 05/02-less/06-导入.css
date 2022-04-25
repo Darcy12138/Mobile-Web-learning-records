@@ -1,5 +1,19 @@
 .father {
-  width: 150px;
-  width: 1.81333333rem;
+  color: red;
+}
+.father .son {
+  width: 50px;
+}
+.father .son a {
+  color: green;
+}
+.father .son a:hover {
+  color: aqua;
+}
+.father .son a::before {
+  content: 'lalalall';
+}
+.father .son a:nth-child(1) {
+  color: cadetblue;
 }
 /* 块 / 多行 注释 */
