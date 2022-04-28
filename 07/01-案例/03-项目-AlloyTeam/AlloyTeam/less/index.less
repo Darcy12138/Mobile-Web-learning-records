@@ -1,0 +1,41 @@
+/* : 实际开发中不需要检查元素看尺寸, 在设计稿里面测量尺寸
+大屏: 500
+中屏: 500, 大于992, min-width
+小屏: 400, 大于768, min-width
+超小屏: 250, 小于768, max-width
+// 不同的视口, 图的尺寸不一致, 媒体查询
+*/
+// 轮播图
+.carousel {
+    @media (max-width: 768px) {
+        // 图加尺寸
+        .item {
+            height: 250px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .item {
+            height: 400px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            height: 500px;
+        }
+    }
+
+    // 默认图片的高度是auto, 高度跟随宽度变化, 我们想要的是高度随着父级尺寸变化
+    img {
+        height: 100%!important;
+    }
+}
+
+// 头部
+.navbar-default {
+    height: 70px;
+    background-color: transparent;
+    border: 0;
+}
+

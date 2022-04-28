@@ -1,0 +1,168 @@
+@import './base.less';
+
+// 定义变量
+@ratio: 3.75vw;
+@color: #fb7299;
+
+// 头部
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: (84 / @ratio);
+    background-color: #fff;
+    z-index: 999;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: (44 / @ratio);
+        padding-left: (18 / @ratio);
+        padding-right: (12 / @ratio);
+
+        .logo {
+            .iconfont {
+                font-size: (29 / @ratio);
+                color: @color;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            a {
+                &:nth-child(2) {
+                    img {
+                        width: (24 / @ratio);
+                        margin: 0 (24 / @ratio) 0 (24 / @ratio);
+                    }
+                }
+
+                img {
+                    height: (24 / @ratio);
+
+                }
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        height: (40 / @ratio);
+        border-bottom: 1px solid #eee;
+
+        // 菜单
+        .menu {
+            ul {
+                display: flex;
+                line-height: (40 / @ratio);
+
+                li {
+                    padding: 0 (16 / @ratio);
+                    font-size: (14 / @ratio);
+
+                    a {
+                        display: block;
+                        height: (40 / @ratio);
+                    }
+
+                    &.active {
+                        color: @color;
+                        border-bottom: 2px solid @color;
+                    }
+                }
+            }
+        }
+
+        // 更多
+        .more {
+            display: block;
+            width: (40 / @ratio);
+            height: (40 / @ratio);
+            text-align: center;
+            line-height: (40 / @ratio);
+
+            i {
+                color: #ccc;
+                font-size: (22 / @ratio);
+            }
+        }
+    }
+}
+
+// 视频
+.video {
+    margin-top: (84 / @ratio);
+
+    .video_list {
+        display: flex;
+        // 弹性盒子换行
+        flex-wrap: wrap;
+        padding: (8 / @ratio) (5 / @ratio);
+
+        a {
+            width: 50%;
+            // height: 200px;
+            padding: 0 (5 / @ratio);
+
+            // 图片
+            .pic {
+                position: relative;
+
+                .num {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: (8 / @ratio);
+                    background: linear-gradient(0deg, rgba(0, 0, 0, .85), transparent);
+                    color: #fff;
+                    font-size: (12 / @ratio);
+
+                    .iconfont {
+                        font-size: (14 / @ratio);
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            // 文字
+            .txt {
+                margin-top: (6 / @ratio);
+                margin-bottom: (14 / @ratio);
+                font-size: (12 / @ratio);
+            }
+        }
+    }
+}
+
+// 按钮
+.btn {
+    position: fixed;
+    left: 0;
+    bottom: (20 / @ratio);
+    width: 100vw;
+    padding: (12 / @ratio);
+
+    // background-color: #fb7299;
+    a {
+        display: block;
+        height: (36 / @ratio);
+        background-color: @color;
+        border-radius: (18 / @ratio);
+        text-align: center;
+        line-height: (36 / @ratio);
+        font-size: (14 / @ratio);
+        color: #fff;
+
+        i {
+            margin-right: (8 / @ratio);
+        }
+    }
+}
