@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,41 @@
     <title>全局CSS样式-按钮</title>
     <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
 </head>
+
 <body>
     <button class="btn btn-success btn-lg">成功</button>
 
     <button class="btn btn-warning btn-xs">警告</button>
+    <button class="btn btn-danger btn-lg btn-block disabled=" disabled "">危险！！！！！！</button>
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+            <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="lllll">
+                <div class="input-group-addon">.00</div>
+            </div>
+        </div>
+
+    </form>
+    <button type="submit" class="btn btn-primary">?</button>
+
+    <textarea class="form-control" rows="10"></textarea>
+    <select multiple class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    <hr>
+    <input type="text" class="form-control">
+    <hr>
+    <div class="input-group">
+        <span class="input-group-addon">!!!!!</span>
+        <input class="form-control" id="disabledInput" type="text" placeholder="不准输入文字" disabled>
+    </div>
+
 </body>
+
 </html>

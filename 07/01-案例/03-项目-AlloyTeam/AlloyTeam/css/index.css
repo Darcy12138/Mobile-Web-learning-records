@@ -5,7 +5,7 @@
 超小屏: 250, 小于768, max-width
 // 不同的视口, 图的尺寸不一致, 媒体查询
 */
-@media (max-width: 768px) {
+@media (max-width: 778px) {
   .carousel .item {
     height: 250px;
   }
@@ -20,11 +20,41 @@
     height: 500px;
   }
 }
-.carousel img {
-  height: 100%!important;
+.carousel .carousel-inner .item img {
+  height: 100%;
+}
+.carousel .carousel-indicators li {
+  width: 50px;
+  height: 4px;
 }
 .navbar-default {
   height: 70px;
   background-color: transparent;
-  border: 0;
+  border: none;
+}
+.navbar-default .navbar-toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin-top: 0;
+  margin-right: 0;
+  border: none;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle span {
+  height: 3px;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-nav li {
+  margin-top: 12px;
+}
+.navbar-default .navbar-nav li a {
+  color: hsla(0, 0%, 100%, 0.65);
+  font-weight: 400;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav li a:hover {
+  color: #f2b535;
 }
